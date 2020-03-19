@@ -1,0 +1,32 @@
+@import '../variables'
+
+$shadow-color: $light-pink 
+$shadow-size: 5px
+
+.header
+  color: $light-blue
+  font-size: 3rem
+  font-weight: bold
+  text-shadow: 0 $shadow-size $shadow-color, -5px $shadow-size $shadow-color,
+  0 $shadow-size $shadow-color, 0 $shadow-size $shadow-color
+  margin: -1rem 3rem 2rem 0
+
+
+.headerWrapper
+  background-color: $light-gray
+  margin-bottom: 2rem
+  padding: 3rem
+  border-radius: 1rem
+  width: 90vw
+  max-width: 700px
+
+  @media (max-width: 900px)
+    margin-bottom: 0
+    padding: 0 5vw
+    border-radius: 0
+    padding-top: 3rem
+
+    &:last-child
+      padding-bottom: 3rem
+
+
