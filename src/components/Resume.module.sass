@@ -9,7 +9,11 @@ $shadow-size: 5px
   font-weight: bold
   text-shadow: 0 $shadow-size $shadow-color, -5px $shadow-size $shadow-color,
   0 $shadow-size $shadow-color, 0 $shadow-size $shadow-color
-  margin: -1rem 3rem 2rem 0
+  margin: -1rem 0 2rem 0
+
+  @media (max-width: 401px)
+    font-size: 2.25rem
+    margin-bottom: 1rem
 
 
 .headerWrapper

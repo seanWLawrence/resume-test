@@ -4,17 +4,17 @@ import { useTrail, animated } from "react-spring";
 import Contact from "src/components/Contact";
 import Experience from "src/components/Experience";
 import OpenSource from "src/components/OpenSource";
-import Talks from "src/components/Talks";
+import PublicSpeaking from "src/components/PublicSpeaking";
 
-import { contact, openSource, experience, talks } from "src/data";
+import { contact, openSource, experience, publicSpeaking } from "src/data";
 
 import styles from "./Resume.module.sass";
 
-let items = ["Contact", "Experience", "Talks", "Open Source"];
+let items = ["Contact", "Experience", "Public Speaking", "Open Source"];
 let contents = [
   <Contact {...contact} />,
   <Experience {...experience} />,
-  <Talks {...talks} />,
+  <PublicSpeaking {...publicSpeaking} />,
   <OpenSource {...openSource} />
 ];
 let config = { mass: 5, tension: 500, friction: 100 };

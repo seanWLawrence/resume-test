@@ -2,20 +2,26 @@
 
 .name
   font-size: 32px
+  margin-bottom: 0
 
 .logo
   max-width: 1.5rem
   margin: 0 .5rem
   transform: translateY(.25rem)
 
-.avatar
-  border-radius: 50%
-  width: 7rem
-  height: 7rem
+.avatarWrapper
+  display: flex
+  flex-direction: column
+  align-items: center
   margin-right: 2rem
 
   @media (max-width: 900px)
     margin-bottom: 1rem
+
+
+.avatar
+  border-radius: 50%
+  height: 7rem
 
 .wrapper
   display: flex
@@ -24,9 +30,25 @@
   @media (max-width: 675px)
     flex-direction: column
 
+.emailWrapper
+  margin-top: .5rem
+
 .socialMediaAccountsWrapper
   display: flex
   align-items: baseline
   flex-wrap: nowrap
   margin-top: .5rem
 
+.programmingLanguageWrapper
+  display: flex
+  flex-wrap: wrap
+  margin-top: .5rem
+
+.programmingLanguageBadge
+  font-size: .75rem
+  font-weight: bold
+  padding: .5rem
+  border-radius: 1rem
+  background-color: $light-gray
+  margin-right: .5rem 
+  margin-top: .5rem

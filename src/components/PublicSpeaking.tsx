@@ -2,24 +2,24 @@ import React, { memo, FC } from "react";
 
 import Card from "./Card";
 
-import styles from "./Talks.module.sass";
+import styles from "./PublicSpeaking.module.sass";
 
-interface Talk {
+interface PublicSpeaking {
   name: string;
   description: string;
   location: string;
   url?: string;
 }
 
-interface TalksProps {
-  talks: Talk[];
+interface PublicSpeakingProps {
+  publicSpeakings: PublicSpeaking[];
 }
 
-let Talks: FC<TalksProps> = ({ talks }) => {
+let PublicSpeaking: FC<PublicSpeakingProps> = ({ publicSpeakings }) => {
   return (
     <Card>
-      <div className={styles.talksWrapper}>
-        {talks.map(({ name, description, url, location }) => {
+      <div className={styles.publicSpeakingWrapper}>
+        {publicSpeakings.map(({ name, description, url, location }) => {
           return (
             <div key={name}>
               <h6>
@@ -42,4 +42,4 @@ let Talks: FC<TalksProps> = ({ talks }) => {
   );
 };
 
-export default memo(Talks);
+export default memo(PublicSpeaking);

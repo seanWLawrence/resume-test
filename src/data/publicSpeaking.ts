@@ -1,5 +1,5 @@
 export default {
-  talks: [
+  publicSpeakings: [
     {
       name: "Don't block the frontend!",
       description:

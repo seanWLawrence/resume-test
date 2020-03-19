@@ -22,6 +22,16 @@ interface ContactProps {
   socialMediaAccounts: SocialMediaAccount[];
 }
 
+interface ProgrammingLanguageBadgeProps {
+  language: string;
+}
+
+let ProgrammingLanguageBadge: FC<ProgrammingLanguageBadgeProps> = ({
+  language
+}) => {
+  return <span className={styles.programmingLanguageBadge}>{language}</span>;
+};
+
 interface AvatarProps {
   src: string;
 }
@@ -73,23 +83,32 @@ let Contact: FC<ContactProps> = ({
     <header>
       <Card>
         <div className={styles.wrapper}>
-          <Avatar src="avatar.jpg" />
+          <div className={styles.avatarWrapper}>
+            <Avatar src="avatar.jpg" />
+
+            <SocialMediaAccounts socialMediaAccounts={socialMediaAccounts} />
+          </div>
           <div>
             <h1 className={styles.name}>{name}</h1>
 
             <div>
-              <strong>{programmingLanguages.join(" | ")}</strong>
+              <div className={styles.programmingLanguageWrapper}>
+                {programmingLanguages.map(language => {
+                  return (
+                    <ProgrammingLanguageBadge
+                      language={language}
+                      key={language}
+                    />
+                  );
+                })}
+              </div>
 
               <address>
                 <p>
                   <a href={`tel:1-${phone}`}>{phone}</a>
-                  {" | "}
-                  <a href={`mailto:${email}`}>{email}</a>
-                  {" | "}
-                  {city}, {state}
-                  <SocialMediaAccounts
-                    socialMediaAccounts={socialMediaAccounts}
-                  />
+                  <div className={styles.emailWrapper}>
+                    <a href={`mailto:${email}`}>{email}</a>
+                  </div>
                 </p>
               </address>
             </div>
