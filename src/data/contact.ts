@@ -5,8 +5,8 @@ export default {
   state: "WA",
   phone: "210-632-0555",
   programmingLanguages: [
-    "TypeScript/Javascript",
-    "GraphQL",
+    "TypeScript/Javascript/React",
+    "GraphQL/Apollo",
     "Ruby/Rails",
     "HTML",
     "SCSS/SASS/CSS"
