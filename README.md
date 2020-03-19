@@ -46,3 +46,7 @@ Create an issue and let's talk!
 ## License
 
 MIT
+
+## Author
+
+Sean W. Lawrence
